@@ -18,7 +18,7 @@ export class SidebarComponent {
   ];
 
   bottomIcons = [
-    { icon: 'assets/sidebar/person-circle-outline.svg', route: '/account', tooltip: 'Accounts', badge: 1 },
+    { icon: 'assets/sidebar/person-circle-outline.svg', route: '/about', tooltip: 'Accounts', badge: 1 },
     { icon: 'assets/sidebar/settings-outline.svg', route: '/settings', tooltip: 'Settings' }
   ];
 }
