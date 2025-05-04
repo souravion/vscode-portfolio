@@ -1,0 +1,105 @@
+.vs-sidebar {
+  width: 48px;  /* Sidebar width */
+  background-color: var(--topbar-bg);
+  height: calc(100vh - 12vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.vs-sidebar .explore-section {
+  position: absolute;
+  top: 0;
+  left: 48px;  /* Start right after the sidebar */
+  width: 200px;  /* Fixed width for the explore section */
+  height: 100%;
+  background-color: #f0f0f0;  /* Background color for the explore section */
+  overflow-y: auto;  /* Scroll if the content is too long */
+  padding: 10px;
+}
+
+.vs-sidebar .explore-section .file-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.vs-sidebar .explore-section .file-item {
+  padding: 10px;
+  background-color: #fff;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.vs-sidebar .explore-section .file-item:hover {
+  background-color: #e0e0e0;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-group.top {
+  gap: 8px;
+}
+
+.icon-group.bottom {
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.icon-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s, opacity 0.2s;
+  opacity: 0.6; /* Set default opacity to low */
+}
+
+.icon-button.active {
+  opacity: 1; /* Set opacity to high when active */
+}
+
+.icon-button.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background-color: var(--badge-color);
+  border-radius: 2px;
+}
+
+.icon-button:hover {
+  background-color: var(--hover-color);
+}
+
+.icon-button img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--badge-color);
+  color: var(--badge-text-color);
+  font-size: 10px;
+  padding: 0 5px;
+  border-radius: 8px;
+}

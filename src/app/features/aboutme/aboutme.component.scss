@@ -1,0 +1,77 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:var(--primary-bg-color);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:10px 20px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-border-color);
+  box-shadow: 0 0 15px #00000077;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 32px;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #888888;
+  margin-bottom: 30px;
+}
+
+.section {
+  background-color: var(--secondary-bg-color);
+  padding: 8px 14px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 16px;
+  margin: 10px 0;
+  color:var(--keyword-color)
+}
+
+
+
+/* Styling for variables */
+.variable {
+  color:var(--variable-color); /* Green color for variables */
+  font-weight: bold;
+}
+
+/* Styling for braces */
+.brace {
+  color:var(--brace-color);
+  font-weight: bold;
+}
+
+.return {
+  color:var(--return-color);
+}
+
+// .indent {
+//   color: #e4e4e4;
+//   margin-left: 20px; /* This adds indentation for each line */
+// }
+.section-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-text-color);
+}
+

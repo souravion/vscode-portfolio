@@ -1,0 +1,42 @@
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  font-size: 12px;
+  height: 28px;
+  padding: 2px 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.left-section, .right-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  line-height: 1;
+}
+
+.item img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+.item:hover {
+  background-color: #3a3d41;
+  cursor: pointer;
+}

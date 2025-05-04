@@ -1,0 +1,63 @@
+/* Contact Section */
+.contact-section {
+  padding: 16px 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center the whole section */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+}
+
+/* Contact Card Styling */
+.contact-card {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  background-color: transparent;
+  // box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+/* Code Block Styling */
+pre {
+  border: 1px solid #353535;
+  border-radius: 8px;
+  padding: 20px;
+  background-color:var(--primary-bg-color);
+  font-size: 16px;
+}
+
+/* Code Styling */
+code {
+  color: #dcdcdc;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code .comment {
+  color: #7f8c8d;
+}
+code span.keyword {
+  color: #569CD6; /* Blue for 'const', 'let' etc. */
+}
+
+code span.variable {
+  color: #9CDCFE; /* Light blue or cyan for variable names */
+}
+code span.console {
+  color: #DCDCAA; /* Yellowish - for 'console' object */
+}
+
+code span.log {
+  color: #C586C0; /* Pinkish-purple - for method 'log' */
+}

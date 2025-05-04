@@ -1,0 +1,45 @@
+<nav class="vs-sidebar">
+  <!-- Existing Sidebar Content (Top and Bottom Icons) -->
+  <div class="icon-group top">
+    @for (item of topIcons; track $index) {
+    <a
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [title]="item.tooltip"
+      class="icon-button"
+    >
+      <img [src]="item.icon" alt="{{ item.tooltip }}" />
+      @if (item.badge) {
+      <span class="badge">{{ item.badge }}</span>
+    }
+    </a>
+  }
+  </div>
+
+  <div class="icon-group bottom">
+    @for (item of bottomIcons; track $index) {
+    <a
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [title]="item.tooltip"
+      class="icon-button"
+    >
+      <img [src]="item.icon" alt="{{ item.tooltip }}" />
+      @if (item.badge) {
+      <span class="badge">{{ item.badge }}</span>
+    }
+    </a>
+  }
+  </div>
+
+  <!-- New Explore Section -->
+  <!-- <div class="explore-section">
+    <div class="file-list">
+      <div *ngFor="let file of files" class="file-item">
+        <span>{{ file.name }}</span>
+      </div>
+    </div>
+  </div> -->
+</nav>

@@ -1,0 +1,38 @@
+<section class="container">
+  <div class="split-container">
+    <!-- Left Side (Code View) -->
+    <div class="left-side">
+      <h2>Code</h2>
+      <pre ngNonBindable>
+        <code>
+          <span class="keyword">import</span> &#123; <span class="className">Component</span> &#125; <span class="keyword">from</span> <span class="string">&#39;&#64;angular/core&#39;</span>
+
+          <span>&#64;</span><span class="componentDec">Component</span>&#40; &#123;
+            <span class="comDecProperty">selector:</span> <span class="string">&#39;app-home&#39;</span>,
+            <span class="comDecProperty">standalone:</span> <span class="brace">true</span>,
+            <span class="comDecProperty">imports:</span> <span class="brace">&#91;&#93;</span>,
+            <span class="comDecProperty">templateUrl:</span> <span class="string">&#39;./home.component.html&#39;</span>,
+            <span class="comDecProperty">styleUrls:</span><span class="string">&#39;./home.component.scss&#39;</span>
+          &#125;&#41;
+          <span class="keyword">export</span> <span class="comClass">class</span> <span class="className">HomeComponent</span> &#123;
+           <span class="comClass">readonly</span> <span class="comClassVariavle">devInfo</span> = &#123;
+            <span class="comDecProperty">greeting:</span> <span class="string">&#34;Hi, I am &#34;</span>,
+            <span class="comDecProperty">name:</span> <span class="string">&#34;Sourav Halder&#34;</span>,
+            <span class="comDecProperty">designation:</span> <span class="string">&#34;Software Engineer&#34;</span>,
+            <span class="comDecProperty">description:</span> <span class="string">&#34;Building modern web and mobile experiences&#34;</span>
+            &#125;;
+          &#125;
+        </code>
+      </pre>
+    </div>
+
+    <!-- Right Side (Output View) -->
+    <div class="right-side">
+      <p class="hi-text"><span class="hi-color">{{ devinfo.greeting }}</span></p>
+      <p><span class="name-color">{{ devinfo.name }}</span></p>
+      <p class="designation-text">{{ devinfo.designation }}</p>
+      <p class="desc-text">{{ devinfo.description }}</p>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<div class="tabs-bar">
+  @for (tab of portfolioFiles; track $index) {
+  <a
+    class="tab"
+    [routerLink]="tab.route"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <img class="file-icon" [src]="getIconPath(tab.type)" alt="{{ tab.type }}" />
+    <span>{{ tab.name }}</span>
+  </a>
+}
+</div>

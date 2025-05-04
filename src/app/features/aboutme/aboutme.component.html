@@ -1,0 +1,74 @@
+<div class="about-container">
+  <!-- Profile Image -->
+  <!-- <img src="https://lh3.googleusercontent.com/p/AF1QipPkPaAz0flKF3ARkvu7RAwFLBIcxyIFSsGRzr7Y=s680-w680-h510-rw" alt="Profile Photo" class="profile-image" /> -->
+
+  <!-- Name and Title -->
+  <h1 class="name">Sourav Halder</h1>
+  <p class="subtitle">Software Engineer</p>
+
+  <!-- About Me -->
+  <section class="section">
+    <h2 class="section-title">
+      const <span class="variable">aboutMe</span> = () =&gt; <span class="brace">&lbrace;</span>
+    </h2>
+    <div class="section-text">
+      <span class="return">return `</span><br>
+      <div>
+        <span class="indent">{{aboutMeText}}</span>
+      </div>
+      <div>
+        <span class="indent">{{aboutMeSubText}}</span>
+      </div>
+
+      <span class="return">`;</span>
+    </div>
+    <h2 class="section-title">
+      <span class="brace">&rbrace;</span>
+    </h2>
+  </section>
+
+
+  <section class="section">
+    <h2 class="section-title">
+      const <span class="variable">experience</span> = () =&gt; <span class="brace">&lbrace;</span>
+    </h2>
+    <div class="section-text">
+      <span class="return">return `</span><br>
+      <span class="indent">{{experienceText}}</span>
+      <span class="return">`;</span>
+    </div>
+    <h2 class="section-title">
+      <span class="brace">&rbrace;</span>
+    </h2>
+  </section>
+  <section class="section">
+    <h2 class="section-title">const <span class="variable">techStack</span> = () =&gt; <span class="brace">&lbrace;</span></h2>
+    <div class="section-text">
+      <span class="return">return `</span><br>
+      <ul>
+        @for (tech of techStack; track $index) {
+        <li>{{ tech }}</li>
+      }
+      </ul>
+      <span class="return">`;</span>
+    </div>
+    <h2 class="section-title">
+      <span class="brace">&rbrace;</span>
+    </h2>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">
+      const <span class="variable">beyondCoding</span> = () =&gt; <span class="brace">&lbrace;</span>
+    </h2>
+    <div class="section-text">
+      <span class="return">return `</span><br>
+      <span class="indent">{{beyondCodingText}}</span>
+      <span class="return">`;</span>
+    </div>
+    <h2 class="section-title">
+      <span class="brace">&rbrace;</span>
+    </h2>
+  </section>
+
+</div>

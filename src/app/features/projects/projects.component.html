@@ -1,0 +1,25 @@
+<section class="projects-section">
+  <h2 class="projects-heading">{{ heading }}</h2>
+  <p class="projects-description">{{ description }}</p>
+
+  <div class="thumbnail-container">
+    @for (project of projects; track $index) {
+    <div
+      class="thumbnail-card"
+      (click)="openProject(project.routeLink)"
+      style="cursor: pointer;"
+    >
+      <div class="thumbnail-image">
+        <img [src]="project.imageUrl" [alt]="project.title" />
+      </div>
+      <div class="thumbnail-content">
+        <h3 class="thumbnail-title">{{ project.title }}</h3>
+        <p class="thumbnail-description">{{ project.description }}</p>
+        <div class="tech-stack">
+          <span class="tech-item" *ngFor="let tech of project.techStack">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  }
+  </div>
+</section>

@@ -1,0 +1,106 @@
+/* Thumbnail Container */
+.thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  grid-template-rows: auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Thumbnail Card Styling */
+.thumbnail-card {
+  background-color:var(--primary-bg-color);
+  border: 1px solid var(--secondary-border-color);
+  border-radius: 10px;
+  overflow: hidden; /* Keeps the image contained within the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Thumbnail Image */
+.thumbnail-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: inherit; /* Ensures image covers the space properly */
+  border-bottom: 2px solid  var(--secondary-border-color);
+}
+
+/* Thumbnail Content */
+.thumbnail-content {
+  padding: 15px;
+  color: #fff; /* Change text color here for the content */
+}
+
+.thumbnail-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffff; /* Title text color (change as needed) */
+}
+
+.thumbnail-description {
+  font-size: 14px;
+  color: var(--primary-text-color); /* Description text color (change as needed) */
+  margin-bottom: 15px;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  background-color: var(--secondary-border-color);
+  color: #fff;
+  padding: 5px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+/* Responsive Layout Adjustments */
+
+/* Medium screens (tablets, small desktops) */
+@media (max-width: 1024px) {
+  .thumbnail-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .thumbnail-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+.projects-section {
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  text-align: left;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.projects-heading {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #ffff; /* Heading color (change as needed) */
+}
+
+.projects-description {
+  font-size: 16px;
+  color:var(--primary-text-color);
+  max-width: 800px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0px;
+}

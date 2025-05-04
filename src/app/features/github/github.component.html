@@ -1,0 +1,37 @@
+<!-- Profile Card -->
+<div class="profile-container">
+  <div class="profile-card">
+    <div class="profile-image">
+      <img src="https://avatars.githubusercontent.com/u/40751230?v=4" alt="Profile Image" />
+    </div>
+    <h2 class="profile-username">{{ githubProfile.username }}</h2>
+    <div class="profile-stats">
+      <div class="stat">
+        <span class="value">{{ githubProfile.repositories }} repositories</span>
+      </div>
+      <div class="stat">
+        <span class="value">{{ githubProfile.totalStars }} Total Stars</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Repo Cards -->
+<div class="repo-wrapper">
+  @for (repo of repos; track $index) {
+  <div class="repo-card">
+    <div class="repo-header">
+      <h3 class="repo-name">{{ repo.name }}</h3>
+    </div>
+    <p class="repo-description">{{ repo.description }}</p>
+    <div class="repo-footer">
+      <span class="repo-language">
+        <span class="dot" [ngClass]="repo.language === 'TypeScript' ? 'ts' : 'scss'"></span>
+        {{ repo.language }}
+      </span>
+      <span class="repo-stars">⭐ {{ repo.stars }}</span>
+      <a class="repo-link" [href]="repo.url" target="_blank">🔗 View Repo</a>
+    </div>
+  </div>
+}
+</div>

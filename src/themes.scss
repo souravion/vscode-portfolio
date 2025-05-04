@@ -1,0 +1,36 @@
+/* themes.css */
+
+/* Default/Light Theme */
+:root {
+  --primary-bg-color: #1e1e1e;
+  --secondary-bg-color: #252526;
+  --badge-color: #007acc;
+  --badge-text-color:#ffff;
+  --primary-border-color:#007acc;
+  --secondary-border-color: #444;
+  --sidebar-border:#333;
+
+  --primary-text-color:#bcbcbc;
+  --secondary-text-color: #61afef;
+
+  --warning:#f39c12;
+  --keyword-color:#569CD6;
+  --variable-color:#9CDCFE;
+  --brace-clor :#f8f8f2;
+  --return-color:#569CD6;
+  --text-color-light: #ccc;
+
+  --status-bar-bg: #007acc;
+  --status-bar-text-color: white;
+  --topbar-bg-color: #1e1e1e;
+  --topbar-text-color: #ccc;
+
+  --tab-active-bg:#1a1a1a;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --topbar-text-color: white;
+}
+
+/* Additional Themes can be added below */

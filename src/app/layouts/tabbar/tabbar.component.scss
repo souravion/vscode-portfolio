@@ -1,0 +1,43 @@
+.tabs-bar {
+  display: flex;
+  background-color: var(--secondary-bg-color);
+  // border-bottom: 1px solid var(--border-color, #333);
+  height: 32px;
+  align-items: center;
+  overflow-x: auto;
+  flex-shrink: 0;
+
+  .tab {
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--text-color-light);
+
+    &.active {
+      background-color: var(--tab-active-bg, --primary-bg-color);
+      border-top: 1px solid var(--primary-border-color);
+      border-right: 1px solid var(--sidebar-border);
+      border-left: 1px solid var(--sidebar-border);
+    }
+
+    .file-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--text-color-light);
+      margin-left: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}

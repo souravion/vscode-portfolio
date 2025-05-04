@@ -1,0 +1,100 @@
+.explore-section {
+  width: 200px;
+  background-color:var(--primary-bg-color);
+  color: #cccccc;
+  font-size: 13px;
+  padding: 8px 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.explorer-header {
+  font-size: 12px;
+  color: #999;
+  padding: 0 12px 8px;
+  font-weight: 600;
+}
+
+.folder {
+  padding: 0 12px;
+}
+
+.folder-label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 4px 0;
+  cursor: pointer;
+  color: #ccc;
+
+  &:hover {
+    background-color: #2a2a2a;
+  }
+}
+
+.folder-icon {
+  margin-right: 6px;
+}
+
+.file-list {
+  padding-left: 16px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #ccc;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  &.active-file {
+    background-color: #2d2d2d;
+    color: #fff;
+  }
+
+  .file-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+.accordion {
+  padding: 0 12px;
+  margin-top: 12px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 0;
+  color: #ccc;
+
+  &:hover {
+    background-color: #2a2a2a;
+  }
+}
+
+.accordion-icon {
+  margin-right: 6px;
+  width: 14px;
+  display: inline-block;
+}
+
+.accordion-content {
+  // padding-left: 16px;
+  margin-top: 4px;
+}

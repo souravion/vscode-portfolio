@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url(themes.scss);
+/* layout.component.scss */
+
+/* styles.css or styles.scss */
+:root {
+  --font-family:'Source Sans Pro', sans-serif;;
+}
+
+* {
+  font-family: var(--font-family);
+}
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* app-root styles.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+app-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
