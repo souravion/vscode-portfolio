@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,14 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  private readonly route = inject(Router)
   readonly devinfo = {
     greeting: "Hi, I am",
     name: "Sourav Halder",
     description: "Building modern web and mobile experiences",
     designation: "Software Engineer"
+  }
+  viewProject():void{
+    this.route.navigateByUrl('/project')
   }
 }
