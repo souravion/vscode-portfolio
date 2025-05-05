@@ -88,6 +88,9 @@ html, body {
   background-color: var(--primary-bg-color);
   color: white;
   border-left: 1px solid var(--sidebar-border);
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .main {
