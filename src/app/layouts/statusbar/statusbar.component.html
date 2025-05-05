@@ -1,10 +1,11 @@
 <div class="status-bar">
   <div class="left-section">
-    <span class="item">
+    <span class="item" (click)="onBranchClick()">
       <img src="assets/statusbar/git-branch-outline.svg" alt="branch" />
       {{ gitBranch }}
     </span>
   </div>
+
   <div class="right-section">
     <span class="item">Powered by <strong>Angular</strong></span>
 

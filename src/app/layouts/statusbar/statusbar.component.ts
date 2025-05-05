@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { environment } from '../../../environments/environments';
 @Component({
   selector: 'app-statusbar',
   standalone: true,
@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class StatusbarComponent {
   gitBranch = 'master*';
+  onBranchClick():void {
+    window.open(environment.gitUrl)
+  }
 }

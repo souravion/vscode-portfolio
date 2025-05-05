@@ -1,4 +1,4 @@
-<app-toolbar></app-toolbar>
+<!-- <app-toolbar></app-toolbar>
 
 <div class="layout">
   <app-sidebar></app-sidebar>
@@ -15,4 +15,23 @@
   </div>
 </div>
 
-<app-statusbar></app-statusbar>
+<app-statusbar></app-statusbar> -->
+<div class="page">
+  <app-toolbar></app-toolbar> <!-- Top -->
+  <div class="container">
+
+    <div class="sidebar">
+      <app-sidebar/>
+    </div>
+    <div class="explore">
+      <app-explore></app-explore>
+    </div>
+    <div class="main">
+     <app-tabbar/>
+     <div class="container-area ">
+      <router-outlet></router-outlet>
+     </div>
+    </div>   <!-- Right -->
+  </div>
+  <app-statusbar></app-statusbar>   <!-- Bottom -->
+</div>

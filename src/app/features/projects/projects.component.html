@@ -16,7 +16,9 @@
         <h3 class="thumbnail-title">{{ project.title }}</h3>
         <p class="thumbnail-description">{{ project.description }}</p>
         <div class="tech-stack">
-          <span class="tech-item" *ngFor="let tech of project.techStack">{{ tech }}</span>
+          @for (tech of project.techStack; track $index) {
+          <span class="tech-item">{{ tech }}</span>
+        }
         </div>
       </div>
     </div>

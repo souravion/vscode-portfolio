@@ -60,15 +60,16 @@
 
 /* Repo card grid layout */
 .repo-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Adjust the grid */
-  gap: 24px;
-  justify-content: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 25px;
-  box-sizing: border-box;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 24px;
+align-items: center;
+justify-items: center; /* Ensures content inside each grid cell is centered */
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 25px;
+box-sizing: border-box;
 }
 
 .repo-card {
