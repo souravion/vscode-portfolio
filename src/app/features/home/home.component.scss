@@ -9,6 +9,11 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #f4f4f4;
   color: #333;
+  height: 100vh; /* Ensure body fills the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Container */
@@ -16,6 +21,8 @@ body {
   padding: 20px;
   display: flex;
   justify-content: center;
+  height: 100vh; /* Ensure the container takes up the full height */
+  width: 100%;
 }
 
 /* Split View */
@@ -23,12 +30,13 @@ body {
   display: flex;
   width: 100%;
   max-width: 1200px;
+  height: 100%; /* Ensure the container itself takes full height */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-direction: row; /* Default to horizontal layout */
 }
 
-/* Code View (Left Side) */
 /* Code View (Left Side) */
 .left-side {
   flex: 1;
@@ -37,7 +45,10 @@ body {
   padding: 20px;
   overflow-x: auto;
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid var(--secondary-border-color)
+  border-right: 1px solid var(--secondary-border-color);
+  height: 100%; /* Ensure the left side takes up full height */
+  display: flex;
+  flex-direction: column;
 }
 
 .left-side h2 {
@@ -61,25 +72,31 @@ body {
 .keyword {
   color: #c586c0;
 }
-.className{
+
+.className {
   color: #4ec9b0;
 }
-.componentDec{
+
+.componentDec {
   color: #dcdcaa;
 }
 
-.brace{
+.brace {
   color: #4fc1ff;
 }
-.comDecProperty{
+
+.comDecProperty {
   color: #9cdcfe;
 }
-.comClassVariavle{
+
+.comClassVariavle {
   color: #179fff;
 }
-.comClass{
+
+.comClass {
   color: #569cd6;
 }
+
 .string {
   color: #ce9178;
 }
@@ -92,17 +109,16 @@ body {
   color: #6a9955;
 }
 
-
-
 /* Right Side (Output View) */
 .right-side {
   flex: 1;
   padding: 20px;
   background: #1e1e1e;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  height: 100%; /* Ensure the right side takes up full height */
 }
 
 .right-side h2 {
@@ -128,31 +144,40 @@ body {
 }
 
 .name-color {
-  color: var(--secondary-text-color) ;
+  color: var(--secondary-text-color);
   font-weight: bold;
   font-size: 42px;
 }
 
-.designation-text{
+.designation-text {
   color: var(--primary-text-color) !important;
   font-weight: bold;
 }
 
-.desc-text{
+.desc-text {
   color: var(--primary-text-color) !important;
   font-weight: normal;
 }
+
 /* Code-like output */
 
-
-
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* Target tablets and small desktop */
   .split-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack the sections vertically */
   }
 
   .left-side, .right-side {
-    width: 100%;
+    width: 100%; /* Ensure full width for mobile */
+    box-shadow: none; /* Remove shadow for a cleaner look */
+    border-right: none; /* Remove border between sections */
+    margin-bottom: 20px; /* Add space between the sections */
+  }
+}
+
+/* Optional - Add some padding between cards on mobile */
+@media (max-width: 768px) {
+  .left-side, .right-side {
+    padding: 15px; /* Reduce padding on smaller screens */
   }
 }
