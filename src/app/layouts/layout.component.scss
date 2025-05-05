@@ -5,47 +5,130 @@
   overflow: hidden;
 }
 
-.layout {
-  display: flex;
-  flex: 1 1 auto;
-  overflow: hidden; /* Ensure inner scroll works */
-}
+// .layout {
+//   display: flex;
+//   flex: 1 1 auto;
+//   overflow: hidden; /* Ensure inner scroll works */
+// }
 
-app-sidebar {
-  border-right: 1px solid var(--sidebar-border);
-  background-color: var(--secondary-bg-color);
+// app-sidebar {
+//   border-right: 1px solid var(--sidebar-border);
+//   background-color: var(--secondary-bg-color);
+//   height: 100%;
+//   flex-shrink: 0;
+// }
+// app-explore{
+//   background-color: var(--primary-bg-color);
+// }
+
+
+// .explore-section {
+//   width: 200px;
+//   background-color: var(--explore-bg-color, --primary-bg-color);
+//   height: 100%;
+//   flex-shrink: 0;
+//   overflow-y: auto; /* Optional: scroll if needed inside */
+// }
+
+// .main {
+//   flex: 1 1 auto;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden;
+// }
+
+// .content-area {
+//   flex: 1 1 auto;
+//   overflow-y: auto;
+//   padding: 16px;
+//   min-height: 0; /* 💡 This is CRUCIAL for scroll to work in flex items */
+//   background: #2a2a2a;
+// }
+
+
+html, body {
   height: 100%;
-  flex-shrink: 0;
-}
-app-explore{
-  background-color: var(--primary-bg-color);
+  margin: 0;
 }
 
-
-.explore-section {
-  width: 200px;
-  background-color: var(--explore-bg-color, --primary-bg-color);
-  height: 100%;
-  flex-shrink: 0;
-  overflow-y: auto; /* Optional: scroll if needed inside */
-}
-
-.main {
-  flex: 1 1 auto;
+.page {
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow: hidden;
 }
 
-.content-area {
-  flex: 1 1 auto;
+.toolbar {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  flex: 0 0 48px;
+  background:var(--primary-bg-color);
+  color: white;
+  padding: 5px;
+}
+
+.explore {
+  width: 190px;
+  background-color: var(--primary-bg-color);
+  color: white;
+  border-left: 1px solid var(--sidebar-border);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.tab-bar {
+  padding: 1rem;
+  text-align: center;
+}
+
+.container-area {
+  flex: 1;
+  background-color: #2a2a2a;
   overflow-y: auto;
-  padding: 16px;
-  min-height: 0; /* 💡 This is CRUCIAL for scroll to work in flex items */
+  overflow-x: hidden;
+  padding: 1rem;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.container-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container-area::-webkit-scrollbar-track {
   background: #2a2a2a;
 }
 
+.container-area::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
 
+.container-area::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
 
 
 

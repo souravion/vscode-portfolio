@@ -1,10 +1,11 @@
 :host {
   display: flex;
   flex-direction: column;
-  background-color:var(--topbar-bg-color);
+  background-color: var(--topbar-bg-color);
   color: #ccc;
   font-size: 13px;
   user-select: none;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .topbar {
@@ -12,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   height: 30px;
-  background-color:var(--topbar-bg-color);
+  background-color: var(--topbar-bg-color);
   padding: 0 8px;
   border-bottom: 1px solid var(--secondary-border-color);
 }
@@ -20,48 +21,60 @@
 .left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+}
 
-  .logo {
-    font-size: 16px;
-    margin-right: 8px;
+.menu-item {
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
   }
 
-  .menu-item {
-    cursor: pointer;
-
-    &:hover {
-      color: #fff;
-    }
+  &:active {
+    background-color: rgba(255, 255, 255, 0.15);
   }
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .right {
   display: flex;
   align-items: center;
   gap: 8px;
+}
 
-  .icon {
-    cursor: pointer;
-    font-size: 12px;
-    color: #ccc;
+.icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 
-    &.close {
-      color: #f33;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
 
-      &:hover {
-        color: #fff;
-      }
-    }
+  &.close {
+    color: #f33;
 
     &:hover {
+      background-color: #f33;
       color: #fff;
     }
   }
-}
-.logo {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  vertical-align: middle;
 }

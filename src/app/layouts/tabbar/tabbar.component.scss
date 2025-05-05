@@ -1,14 +1,33 @@
 .tabs-bar {
   display: flex;
   background-color: var(--secondary-bg-color);
-  // border-bottom: 1px solid var(--border-color, #333);
   height: 32px;
   align-items: center;
   overflow-x: auto;
   flex-shrink: 0;
 
-  .tab {
+  /* Custom scrollbar */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #555 #2a2a2a; /* Firefox */
 
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #2a2a2a; /* track color */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #555; /* scrollbar thumb */
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+  }
+
+  .tab {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -17,9 +36,10 @@
     cursor: pointer;
     background-color: transparent;
     color: var(--text-color-light);
+    white-space: nowrap;
 
     &.active {
-      background-color: var(--tab-active-bg, --primary-bg-color);
+      background-color: var(--tab-active-bg, var(--primary-bg-color));
       border-top: 1px solid var(--primary-border-color);
       border-right: 1px solid var(--sidebar-border);
       border-left: 1px solid var(--sidebar-border);
