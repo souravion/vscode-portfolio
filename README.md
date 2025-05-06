@@ -2,7 +2,7 @@
 
 > A developer portfolio that looks and feels like Visual Studio Code — built with Angular.
 
-![VscodePortfolio Thumbnail](/assets/images/thumnails.png)
+![VscodePortfolio Thumbnail](assets/images/thumnails.png)
 
 ---
 
