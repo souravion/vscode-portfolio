@@ -6,23 +6,22 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #f4f4f4;
-  color: #333;
-  height: 100vh; /* Ensure body fills the height */
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start; /* Top-aligned */
+  min-height: 100vh;
+  padding-top: 50px; /* Adds space from top */
+  background-color: #f4f4f4;
 }
+
 
 /* Container */
 .container {
   padding: 20px;
   display: flex;
   justify-content: center;
-  height: 100vh; /* Ensure the container takes up the full height */
   width: 100%;
+  height: auto; /* Let it grow based on content */
 }
 
 /* Split View */
@@ -30,7 +29,7 @@ body {
   display: flex;
   width: 100%;
   max-width: 1200px;
-  height: 100%; /* Ensure the container itself takes full height */
+  height: auto; /* Ensure the container itself takes full height */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
